@@ -1,0 +1,77 @@
+.contact-item {
+  padding: var(--space-3);
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--color-gray-100);
+  transition: background-color var(--transition-fast);
+  cursor: pointer;
+  position: relative;
+}
+
+.contact-item:hover {
+  background-color: var(--color-gray-100);
+}
+
+.contact-item.selected {
+  background-color: var(--color-primary-100);
+}
+
+.contact-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  margin-right: var(--space-3);
+  flex-shrink: 0;
+}
+
+.contact-info {
+  flex: 1;
+  overflow: hidden;
+}
+
+.contact-info h3 {
+  margin: 0;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.contact-info p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--color-gray-500);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.favorite-button {
+  background: none;
+  border: none;
+  color: var(--color-gray-400);
+  font-size: 1.2rem;
+  padding: var(--space-1);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity var(--transition-fast), color var(--transition-fast);
+}
+
+.favorite-button.visible,
+.contact-item:hover .favorite-button {
+  opacity: 1;
+}
+
+.favorite-button.favorited {
+  color: var(--color-warning-500);
+  opacity: 1;
+}
+
+.favorite-button:hover {
+  color: var(--color-warning-500);
+}

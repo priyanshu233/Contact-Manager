@@ -1,0 +1,129 @@
+.contact-detail {
+  background-color: white;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  animation: fadeIn var(--transition-normal);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.contact-detail-header {
+  padding: var(--space-5);
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.contact-detail-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-right: var(--space-4);
+  flex-shrink: 0;
+}
+
+.contact-detail-title {
+  flex: 1;
+}
+
+.contact-detail-title h2 {
+  margin: 0 0 var(--space-1);
+  font-size: 1.5rem;
+}
+
+.contact-group {
+  color: var(--color-gray-500);
+  font-size: 0.9rem;
+  margin: 0 0 var(--space-2);
+}
+
+.favorite-badge {
+  display: inline-block;
+  background-color: var(--color-warning-500);
+  color: white;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--border-radius-sm);
+  font-size: 0.8rem;
+}
+
+.contact-detail-actions {
+  display: flex;
+  padding: var(--space-4);
+  border-bottom: 1px solid var(--color-gray-200);
+  gap: var(--space-3);
+}
+
+.edit-button, .delete-button {
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--border-radius-md);
+  border: none;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.edit-button {
+  background-color: var(--color-primary-500);
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: var(--color-primary-600);
+}
+
+.delete-button {
+  background-color: white;
+  color: var(--color-error-500);
+  border: 1px solid var(--color-error-500);
+}
+
+.delete-button:hover {
+  background-color: var(--color-error-500);
+  color: white;
+}
+
+.contact-detail-info {
+  padding: var(--space-4);
+}
+
+.info-item {
+  margin-bottom: var(--space-4);
+  display: flex;
+  flex-direction: column;
+}
+
+.info-label {
+  font-size: 0.8rem;
+  color: var(--color-gray-500);
+  margin-bottom: var(--space-1);
+}
+
+.info-value {
+  color: var(--color-gray-900);
+}
+
+.notes .info-value {
+  white-space: pre-line;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .contact-detail-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .contact-detail-avatar {
+    margin-right: 0;
+    margin-bottom: var(--space-3);
+  }
+}

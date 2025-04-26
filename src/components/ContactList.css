@@ -1,0 +1,21 @@
+.contact-list {
+  overflow-y: auto;
+  height: calc(100% - 110px);
+}
+
+.contact-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.contact-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.contact-list::-webkit-scrollbar-thumb {
+  background-color: var(--color-gray-300);
+  border-radius: 3px;
+}
+
+.contact-list:hover::-webkit-scrollbar-thumb {
+  background-color: var(--color-gray-400);
+}
